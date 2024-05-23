@@ -27,12 +27,14 @@ rule hisat_map:
         summary="mapping/{sp}.hisat2.summary",
     params:
         prefix=lambda wildcards: "mapping/" + wildcards.sp,
+        infwd=lambda wildcards, input: ",".join(input.fwd),
+        inrev=lambda wildcards, input: ",".join(input.rev),
     threads: 24
     conda: "envs/samtools.yml"
     log: "logs/hisat_map.{sp}.log"
     shell:
         """
-        hisat2/hisat2 --threads {threads} --min-intronlen 9 -x {params.prefix} -1 {input.fwd} -2 {input.rev} --summary-file {output.summary} | samtools view -b --fast -o {output.bam} &> {log}
+        hisat2/hisat2 --threads {threads} --min-intronlen 9 -x {params.prefix} -1 {params.infwd} -2 {params.inrev} --summary-file {output.summary} | samtools view -b --fast -o {output.bam} &> {log}
         """
 
 rule hisat_build:
