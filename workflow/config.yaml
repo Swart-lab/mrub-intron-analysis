@@ -1,0 +1,25 @@
+ecau:
+  name: "Entodinium caudatum MZG-1"
+  ref: "mapping/GCA_002087855.3_ASM208785v3_genomic.fna"
+  fwd: "mapping/SRR8478280_1.fastq.gz"
+  rev: "mapping/SRR8478280_2.fastq.gz"
+iint:
+  name: "Isotricha intestinalis"
+  ref: "mapping/GCA_023807065.1_ASM2380706v1_genomic.fna"
+  fwd: "mapping/SRR8920958_1.fastq.gz"
+  rev: "mapping/SRR8920958_2.fastq.gz"
+dden:
+  name: "Diplodinium dentatum"
+  ref: "mapping/GCA_023807165.1_ASM2380716v1_genomic.fna"
+  fwd: "mapping/SRR8920957_1.fastq.gz"
+  rev: "mapping/SRR8920957_2.fastq.gz"
+bcte:
+  name: "Balantidium ctenopharyngodoni A1"
+  ref: "mapping/GCA_036325645.1_ASM3632564v1_genomic.fna"
+  fwd: "mapping/SRR26318078_1.fastq.gz"
+  rev: "mapping/SRR26318078_2.fastq.gz"
+cmer:
+  name: "Cyanidioschyzon merolae 10D"
+  ref: "mapping/GCA_000091205.1_ASM9120v1_genomic.fna"
+  fwd: "mapping/SRR17295768_1.fastq.gz"
+  rev: "mapping/SRR17295768_2.fastq.gz"

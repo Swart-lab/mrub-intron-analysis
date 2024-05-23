@@ -1,0 +1,62 @@
+rule all:
+    input:
+        expand("mapping/{sp}.hisat2.sort.bam", sp=config)
+
+rule sort_index_mapping:
+    input:
+        "mapping/{sp}.hisat2.bam",
+    output:
+        sort="mapping/{sp}.hisat2.sort.bam",
+        index="mapping/{sp}.hisat2.sort.bam.bai",
+    threads: 4
+    conda: "envs/samtools.yml"
+    shell:
+        """
+        samtools sort --threads {threads} -o {output.sort} --write-index {input};
+        samtools index {output.sort};
+        """
+
+rule hisat_map:
+    input:
+        # hisat2="hisat2/hisat2",
+        index="mapping/{sp}.1.ht2",
+        fwd=lambda wildcards: config[wildcards.sp]["fwd"],
+        rev=lambda wildcards: config[wildcards.sp]["rev"],
+    output:
+        bam=temp("mapping/{sp}.hisat2.bam"),
+        summary="mapping/{sp}.hisat2.summary",
+    params:
+        prefix=lambda wildcards: "mapping/" + wildcards.sp,
+    threads: 24
+    conda: "envs/samtools.yml"
+    log: "logs/hisat_map.{sp}.log"
+    shell:
+        """
+        hisat2/hisat2 --threads {threads} --min-intronlen 9 -x {params.prefix} -1 {input.fwd} -2 {input.rev} --summary-file {output.summary} | samtools view -b --fast -o {output.bam} &> {log}
+        """
+
+rule hisat_build:
+    input:
+        ref=lambda wildcards: config[wildcards.sp]["ref"],
+        # hisat2_build="hisat2/hisat2-build",
+    output:
+        "mapping/{sp}.1.ht2"
+    params:
+        seed=54321,
+        prefix=lambda wildcards: "mapping/" + wildcards.sp,
+    log:
+        "logs/hisat_build.{sp}.log"
+    shell:
+        """
+        hisat2/hisat2-build --seed {params.seed} {input.ref} {params.prefix} &> {log}
+        """
+
+
+rule compile_hisat2:
+    output:
+        hisat2="hisat2/hisat2",
+        hisat2_build="hisat2/hisat2-build",
+    shell:
+        """
+        cd hisat2; make
+        """
