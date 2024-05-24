@@ -1,6 +1,9 @@
 rule all:
     input:
-        expand("portcullis/filter/{sp}.pass.junctions.tab", sp=config)
+        expand(
+            "portcullis/filter/{sp}.pass.junctions.tab",
+            sp=["bcte", "cmer", "dden", "ecau", "ecun", "iint", "mrub", "tamp"]
+        )
 
 rule portcullis_filter:
     input:

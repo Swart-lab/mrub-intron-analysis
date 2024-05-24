@@ -33,6 +33,32 @@ cmer:
     - "mapping/SRR17295768_1.fastq.gz"
   rev:
     - "mapping/SRR17295768_2.fastq.gz"
+pneu:
+  name: "Pseudoloma neurophilia strain MK1"
+  ref: "mapping/GCA_001432165.1_ASM143216v1_genomic.fna"
+  fwd:
+    - "mapping/SRR24416341_1.fastq.gz"
+    - "mapping/SRR24416342_1.fastq.gz"
+  rev:
+    - "mapping/SRR24416341_2.fastq.gz"
+    - "mapping/SRR24416342_2.fastq.gz"
+ecun:
+  name: "Encephalitozoon cuniculi EC2"
+  ref: "mapping/GCA_000221265.2_Ence_cuni_EC2_V1_genomic.fna"
+  fwd:
+    - "mapping/SRR769604_1.fastq.gz"
+    - "mapping/SRR769605_1.fastq.gz"
+    - "mapping/SRR769606_1.fastq.gz"
+    - "mapping/SRR769607_1.fastq.gz"
+    - "mapping/SRR769608_1.fastq.gz"
+    - "mapping/SRR769609_1.fastq.gz"
+  rev:
+    - "mapping/SRR769604_2.fastq.gz"
+    - "mapping/SRR769605_2.fastq.gz"
+    - "mapping/SRR769606_2.fastq.gz"
+    - "mapping/SRR769607_2.fastq.gz"
+    - "mapping/SRR769608_2.fastq.gz"
+    - "mapping/SRR769609_2.fastq.gz"
 mrub:
   name: "Mesodinium rubrum CBJR05"
   ref: "/ebio/abt2_projects/ag-swart-mesodinium/data-deposition/annotations/MrubMAC/assembly/assembly.gc_max60.filter.fasta"
@@ -51,3 +77,4 @@ tamp:
   rev:
     - "/ebio/abt2_projects/ag-swart-mesodinium/analysis/sorted-compare/rnaseq_mapping/mrub_rnaseq_1.trimmed.R2.fastq.gz"
     - "/ebio/abt2_projects/ag-swart-mesodinium/analysis/sorted-compare/rnaseq_mapping/mrub_rnaseq_2.trimmed.R2.fastq.gz"
+
