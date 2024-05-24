@@ -2,4 +2,5 @@
 /mapping
 /portcullis
 .snakemake
+.ipynb_checkpoints
 *.swp
