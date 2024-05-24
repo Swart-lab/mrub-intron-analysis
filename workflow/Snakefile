@@ -1,6 +1,6 @@
 rule all:
     input:
-        expand("portcullis/junc/{sp}.junctions.tab", sp=config)
+        expand("portcullis/filter/{sp}.pass.junctions.tab", sp=config)
 
 rule portcullis_filter:
     input:
