@@ -1,6 +1,55 @@
 rule all:
     input:
-        expand("mapping/{sp}.hisat2.sort.bam", sp=config)
+        expand("portcullis/junc/{sp}.junctions.tab", sp=config)
+
+rule portcullis_filter:
+    input:
+        tab="portcullis/junc/{sp}.junctions.tab",
+    output:
+        filt="portcullis/filter/{sp}.pass.junctions.tab",
+    conda: "envs/portcullis.yml"
+    params:
+        prep_dir="portcullis/prep.{sp}",
+        prefix="portcullis/filter/{sp}",
+    log: "logs/portcullis_filter.{sp}.log"
+    shell:
+        """
+        portcullis filter -o {params.prefix} {params.prep_dir} {input.tab} &> {log}
+        """
+
+rule portcullis_junc:
+    input:
+        ref="portcullis/prep.{sp}/portcullis.genome.fa",
+        sort="portcullis/prep.{sp}/portcullis.sorted.alignments.bam",
+    output:
+        tab="portcullis/junc/{sp}.junctions.tab",
+    conda: "envs/portcullis.yml"
+    threads: 24
+    log: "logs/portcullis_junc.{sp}.log"
+    params:
+        prep_dir="portcullis/prep.{sp}",
+        prefix="portcullis/junc/{sp}",
+    shell:
+        """
+        portcullis junc --threads {threads} -o {params.prefix} --intron_gff {params.prep_dir} &> {log}
+        """
+
+rule portcullis_prep:
+    input:
+        ref=lambda wildcards: config[wildcards.sp]["ref"],
+        sort="mapping/{sp}.hisat2.sort.bam",
+    output:
+        ref="portcullis/prep.{sp}/portcullis.genome.fa",
+        sort="portcullis/prep.{sp}/portcullis.sorted.alignments.bam",
+    conda: "envs/portcullis.yml"
+    threads: 1
+    log: "logs/portcullis_prep.{sp}.log"
+    params:
+        outdir="portcullis/prep.{sp}"
+    shell:
+        """
+        portcullis prep -o {params.outdir} {input.ref} {input.sort} &> {log}
+        """
 
 rule sort_index_mapping:
     input:
