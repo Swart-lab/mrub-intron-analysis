@@ -77,4 +77,12 @@ tamp:
   rev:
     - "/ebio/abt2_projects/ag-swart-mesodinium/analysis/sorted-compare/rnaseq_mapping/mrub_rnaseq_1.trimmed.R2.fastq.gz"
     - "/ebio/abt2_projects/ag-swart-mesodinium/analysis/sorted-compare/rnaseq_mapping/mrub_rnaseq_2.trimmed.R2.fastq.gz"
-
+mosp:
+  name: "Monodinium sp."
+  ref: "mapping/GWHDTXX00000000.genome.fasta"
+  fwd:
+    - "mapping/SRR26752668_1.fastq.gz"
+    - "mapping/SRR26752669_1.fastq.gz"
+  rev:
+    - "mapping/SRR26752668_2.fastq.gz"
+    - "mapping/SRR26752669_2.fastq.gz"
