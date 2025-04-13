@@ -15,5 +15,5 @@ comparison of the MIC and MAC assemblies.
 
 Teleaulax genome assembly published at XXX
 
-RNAseq reads published at XXX
+RNAseq reads published at ENA https://www.ebi.ac.uk/ena/browser/view/PRJEB66165
 
