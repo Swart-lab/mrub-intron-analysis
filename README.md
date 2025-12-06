@@ -17,3 +17,5 @@ Teleaulax genome assembly published at XXX
 
 RNAseq reads published at ENA https://www.ebi.ac.uk/ena/browser/view/PRJEB66165
 
+Attempted to download genome assemblies and transcriptomes from the p10k
+project, but downloads failed for many of them.
