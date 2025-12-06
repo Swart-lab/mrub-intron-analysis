@@ -2,7 +2,9 @@ rule all:
     input:
         expand(
             "portcullis/filter/{sp}.pass.junctions.tab",
-            sp=["bcte", "cmer", "dden", "ecau", "ecun", "iint", "mosp", "mrub", "tamp"]
+            sp=["bcte", "cmer", "dden", "ecau", "ecun", "iint", "mosp", "mrub", "tamp",
+                "lox1", "dcos", "rlon", "sp10", "ssta", "amp2", "epi1", "epi2", "did1", "dim2", "asch", "avis",
+            ],
         )
 
 rule portcullis_filter:

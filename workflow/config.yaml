@@ -86,3 +86,144 @@ mosp:
   rev:
     - "mapping/SRR26752668_2.fastq.gz"
     - "mapping/SRR26752669_2.fastq.gz"
+
+lox1:
+  name: "Loxophyllum sp.1 P10K"
+  ref: "p10k/GWHDPYQ00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889593_f1.fq.gz"
+  rev:
+    - "p10k/CRR889593_r2.fq.gz"
+amus: # skip
+  name: "Arcuospathidium muscorum strain P10K-1"
+  ref: "p10k/GWHDPZT00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889622_f1.fq.gz"
+  rev:
+    - "p10k/CRR889622_r2.fq.gz"
+dcos:
+  name: "Dileptus costaricanus strain P10K-1"
+  ref: "p10k/GWHDPZX00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889626_f1.fq.gz"
+  rev:
+    - "p10k/CRR889626_r2.fq.gz"
+rlon:
+  name: "Rurikoplites longitrichus strain P10K-1"
+  ref: "p10k/GWHDQBF00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889660_f1.fq.gz"
+  rev:
+    - "p10k/CRR889660_r2.fq.gz"
+sp10:
+  name: "Spathidiidae sp.10 P10K"
+  ref: "p10k/GWHDQBN00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889668_f1.fq.gz"
+  rev:
+    - "p10k/CRR889668_r2.fq.gz"
+enc1: # skip
+  name: "Enchelyodon sp.1 P10K"
+  ref: "p10k/GWHDQCP00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889696_f1.fq.gz"
+  rev:
+    - "p10k/CRR889696_r2.fq.gz"
+enc2: # skip
+  name: "Enchelyodon sp.2 P10K"
+  ref: "p10k/GWHDQCQ00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889697_f1.fq.gz"
+  rev:
+    - "p10k/CRR889697_r2.fq.gz"
+lox5: # skip
+  name: "Loxophyllum sp.5 P10K"
+  ref: "p10k/GWHDQCX00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889704_f1.fq.gz"
+  rev:
+    - "p10k/CRR889704_r2.fq.gz"
+lit3: # skip
+  name: "Litonotidae sp.3 P10K"
+  ref: "p10k/GWHDQER00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889750_f1.fq.gz"
+  rev:
+    - "p10k/CRR889750_r2.fq.gz"
+amp1: # skip
+  name: "Amphileptidae sp.1 P10K"
+  ref: "p10k/GWHDQFU00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889779_f1.fq.gz"
+  rev:
+    - "p10k/CRR889779_r2.fq.gz"
+spa1: # skip
+  name: "Spathidiidae sp.1 P10K"
+  ref: "p10k/GWHDQGY00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889809_f1.fq.gz"
+  rev:
+    - "p10k/CRR889809_r2.fq.gz"
+ssta:
+  name: "Spathidium stammeri strain P10K-1"
+  ref: "p10k/GWHDQHG00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889817_f1.fq.gz"
+  rev:
+    - "p10k/CRR889817_r2.fq.gz"
+amp2:
+  name: "Amphileptidae sp.2 P10K"
+  ref: "p10k/GWHDQJN00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889876_f1.fq.gz"
+  rev:
+    - "p10k/CRR889876_r2.fq.gz"
+epi1:
+  name: "Epispathidium sp.1 P10K"
+  ref: "p10k/GWHDQJV00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889884_f1.fq.gz"
+  rev:
+    - "p10k/CRR889884_r2.fq.gz"
+dcos2: # skip
+  name: "Dileptus costaricanus strain P10K-2"
+  ref: "p10k/GWHDQMZ00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR889966_f1.fq.gz"
+  rev:
+    - "p10k/CRR889966_r2.fq.gz"
+epi2:
+  name: "Epispathidium sp.2 P10K"
+  ref: "p10k/GWHDQPO00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR890033_f1.fq.gz"
+  rev:
+    - "p10k/CRR890033_r2.fq.gz"
+did1:
+  name: "Didiniidae sp.1 P10K"
+  ref: "p10k/GWHDQRO00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR890085_f1.fq.gz"
+  rev:
+    - "p10k/CRR890085_r2.fq.gz"
+dim2:
+  name: "Dimacrocaryonidae sp.2 P10K"
+  ref: "p10k/GWHDQRY00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR890095_f1.fq.gz"
+  rev:
+    - "p10k/CRR890095_r2.fq.gz"
+asch:
+  name: "Apobryophyllum schmidingeri strain P10K-1"
+  ref: "p10k/GWHDQSI00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR890105_f1.fq.gz"
+  rev:
+    - "p10k/CRR890105_r2.fq.gz"
+avis:
+  name: "Apodileptus visscheri rhabdoplites strain P10K-1"
+  ref: "p10k/GWHDQSW00000000.genome.fasta"
+  fwd:
+    - "p10k/CRR890119_f1.fq.gz"
+  rev:
+    - "p10k/CRR890119_r2.fq.gz"
