@@ -5,7 +5,9 @@ rule all:
             sp=["bcte", "cmer", "dden", "ecau", "ecun", "iint", "mosp", "mrub", "tamp",
                 "lox1", "dcos", "rlon", "sp10", "ssta", "amp2", "epi1", "epi2", "did1", "dim2", "asch", "avis",
             ],
-        )
+            # pneu - not enough junctions to create training set
+        ),
+        "portcullis/junc/pneu.junctions.tab",
 
 rule portcullis_filter:
     input:
